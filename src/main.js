@@ -1,7 +1,15 @@
-const button = document.getElementById('button');
+const express = require('express');
 
-button.addEventListener('click', () => {
-    document.write('unu');
-})
+//Iniciación
+const app = express();
 
-console.log('Git feo unu')
+//Settings
+app.set('port', process.env.PORT || 8000);
+
+//Rutas
+app.use(require('./routes/index'));
+
+//Arranque servidor
+app.listen(app.get('port'), () => {
+    console.log('Servidor en el puerto', app.get('port'));
+});
