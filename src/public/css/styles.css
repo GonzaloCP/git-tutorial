@@ -1,0 +1,14 @@
+h1{
+    color: red;
+}
+
+.image{
+    border: 1rem;
+    border-style: solid;
+    border-radius: 30%;
+    border-color: #8a2be2;
+}
+
+.image:hover{
+    border-color: #000;
+}
